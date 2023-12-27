@@ -35,4 +35,7 @@ Usuario.hasMany(Publicacion, {
     foreinkey: "usuarioId",
     sourceKey: "id",
   });
-  Publicacion.belongsTo(Usuario, { foreinkey: "usuarioId", targetId: "id" });
+
+  Publicacion.belongsTo(Usuario, { 
+    foreinkey: "usuarioId", 
+    targetId: "id" });
