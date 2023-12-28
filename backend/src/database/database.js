@@ -1,11 +1,12 @@
 import Sequelize from "sequelize";
+import {DB_HOST,DB_DATABASE,DB_USER,DB_PASSWORD} from "../config.js"
 
 export const sequelize = new Sequelize(
-    "projectsdb1", // db name,
-    "postgres", // username
-    "v4juuK4fUPYoguaK", // password
+    DB_DATABASE, // db name,
+    DB_USER, // username
+    DB_PASSWORD, // password
     {
-        host: "localhost",
+        host: DB_HOST,
         dialect: "postgres",
     }
 );
