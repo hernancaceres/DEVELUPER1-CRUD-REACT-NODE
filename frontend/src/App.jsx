@@ -1,5 +1,6 @@
 import CrearPublicacion from "./pages/CrearPublicacion"
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MostrarPublicaciones from "./pages/MostrarPublicaciones";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/crear-publicacion" element={< CrearPublicacion />} />
+        <Route path="/publicaciones" element={< MostrarPublicaciones />} />
       </Routes>
     </BrowserRouter>
   )
