@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000";
+const URL = import.meta.env.VITE_BACKEND_URL;
 
 const CrearPublicacion = () => {
   const [publicacion, setPublicacion] = useState({
@@ -11,7 +11,7 @@ const CrearPublicacion = () => {
     imagen: '',
   });
 
-  // const navigate = useNavigate();
+ const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +31,7 @@ const CrearPublicacion = () => {
       );
 
       // Lógica adicional después de crear el proyecto (redirección, actualización, etc.)
-      // navigate('/posts');
+      navigate('/publicaciones');
 
       console.log('Publicacion creada:', response.data);
     } catch (error) {

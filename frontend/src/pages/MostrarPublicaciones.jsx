@@ -3,7 +3,6 @@ import axios from 'axios';
 
 const URL = import.meta.env.VITE_BACKEND_URL;
 
-
 const MostrarPublicaciones = () => {
   const [publicaciones, setPublicaciones] = useState([]);
 
